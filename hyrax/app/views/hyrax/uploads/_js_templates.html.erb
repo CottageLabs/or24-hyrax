@@ -2,7 +2,7 @@
 <% fade_class_if_not_test = Rails.env.test? ? '' : 'fade' %>
 <script id="template-upload" type="text/x-tmpl">
 {% for (var i=0, file; file=o.files[i]; i++) { %}
-    <tr class="template-upload <%= fade_class_if_not_test %>">
+    <tr class="template-upload">
         <td>
             <span class="preview"></span>
         </td>
@@ -54,7 +54,7 @@
 <!-- The template to display files available for download -->
 <script id="batch-template-download" type="text/x-tmpl">
 {% for (var i=0, file; file=o.files[i]; i++) { %}
-    <tr class="template-download add-batch-work-file-wrapper <%= fade_class_if_not_test %>">
+    <tr class="template-download add-batch-work-file-wrapper">
         <td>
           <div class="row padding-bottom">
             <div class="col-sm-6 name">
