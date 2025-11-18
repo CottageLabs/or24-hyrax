@@ -346,6 +346,7 @@ $RECYCLE.BIN/
 # Seed file for creating usres
 /hyrax/seed/*
 !hyrax/seed/setup.json.template
+!hyrax/seed/.keep
 
 volumes/solr/*
 volumes/db-app/*
