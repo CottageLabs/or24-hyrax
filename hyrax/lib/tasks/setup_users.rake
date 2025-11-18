@@ -26,7 +26,6 @@ namespace :or2024 do
       puts "--- User: #{user_count} ---"
 
       newuser = User.find_by(email: user["email"])
-      messages = "Updating user #{newuser.email}"
 
       unless newuser
         messages = "Creating user #{user["email"]}"
@@ -37,6 +36,8 @@ namespace :or2024 do
         )
         newuser.password = user["password"]
         newuser.save!
+      else
+        messages = "Updating user #{newuser.email}"
       end
 
       if user["role"] == "admin"
